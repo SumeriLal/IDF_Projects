@@ -1,0 +1,64 @@
+{
+  // Important!!!!!!! 
+  // for this to work You must add  "terminal.integrated.allowWorkspaceConfiguration":true
+  // in your user settings 
+  // see https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations 
+  // on how to locate your user settings
+  "terminal.integrated.profiles.windows": {
+    "idf": {
+      "path": "${env:windir}/System32/cmd.exe",
+      "args": ["/k", "C:/Users/sumer/OneDrive/Desktop/esp-idf/export.bat"],
+      
+      "env": {
+        "IDF_PYTHON_ENV_PATH" : "C:/esp/esp-idf/.espressif/tools/idf-python/3.8.7/Scripts"
+      }
+      
+    }
+  },
+  "terminal.integrated.profiles.linux": {
+    "idf": {
+      "path": "/bin/bash",
+      "args":["--init-file", "C:/Users/sumer/OneDrive/Desktop/esp-idf/export.sh", "-i"],
+      
+        "env": {
+          "IDF_PYTHON_ENV_PATH" : "C:/esp/esp-idf/.espressif/tools/idf-python/3.8.7/Scripts"
+        }
+        
+    },
+  },
+  "terminal.integrated.profiles.osx": {
+    "idf": {
+      "path": "/bin/bash",
+      "args": ["--init-file", "C:/Users/sumer/OneDrive/Desktop/esp-idf/export.sh", "-i"],
+      
+        "env": {
+          "IDF_PYTHON_ENV_PATH" : "C:/esp/esp-idf/.espressif/tools/idf-python/3.8.7/Scripts"
+        }
+        
+    },
+  },
+  // the following is being depricated and will be replaced.
+  "terminal.integrated.shell.windows": "cmd.exe",
+  
+  "terminal.integrated.env.windows": {
+    "IDF_PYTHON_ENV_PATH" : "C:/esp/esp-idf/.espressif/tools/idf-python/3.8.7/Scripts"
+  },
+  "terminal.integrated.env.osx": {
+    "IDF_PYTHON_ENV_PATH" : "C:/esp/esp-idf/.espressif/tools/idf-python/3.8.7/Scripts"
+  },
+  "terminal.integrated.env.linux": {
+    "IDF_PYTHON_ENV_PATH" : "C:/esp/esp-idf/.espressif/tools/idf-python/3.8.7/Scripts"
+  },
+  
+  "terminal.integrated.shellArgs.windows": ["/k", "C:/Users/sumer/OneDrive/Desktop/esp-idf/export.bat"],
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "terminal.integrated.shellArgs.linux": ["--init-file", "C:/Users/sumer/OneDrive/Desktop/esp-idf/export.sh", "-i"],
+  "terminal.integrated.shell.osx": "/bin/bash",
+  "terminal.integrated.shellArgs.osx": ["--init-file", "C:/Users/sumer/OneDrive/Desktop/esp-idf/export.sh", "-i"],
+  "files.associations": {
+    "*.md": "markdown",
+    "*.mdx": "tdx",
+    "stdio.h": "c"
+  },
+  "git.ignoreLimitWarning": true
+}
